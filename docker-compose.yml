@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /home/ryunosuke/Documents/test2/frontend:/usr/src/frontend
+    command: /bin/bash -c "source /root/.nvm/nvm.sh && PORT=3001 npm start"
+    ports:
+      - "3001:3001"
